@@ -6,7 +6,7 @@ This assignment is the biggest milestone since we started the workshops. It's a 
 
 This assignment will require you to combine everything we covered so far into one relatively large application. And what other app to build, than a todo application? You'll find that whenever you pick up a new JavaScript related technology, the best way to test it is by building a todo app. It has everything in it: state management to handle your todos, different UIs to add and inspect todos, styling, and so on.
 
-You're tasked to make an app based on this wireframe.
+You're tasked to make an app based on [this wireframe](). (TBA)
 
 Some criteria for the app:
 - You'll have to initialise a `package.json` to manage installed libraries
@@ -22,7 +22,8 @@ Some criteria for the app:
   - Use [`parcel`](https://www.npmjs.com/package/parcel) to hot-reload and build your project
   - Use [`sweetalert`](https://www.npmjs.com/package/sweetalert) to display an alert to the user when they want to delete a todo (Hint: the first example on the package's page is a good starting point 😉)
   - Search for a library yourself that you can somehow incorporate into the project
-- The initial todo list state should be fetched from `https://jsonplaceholder.typicode.com/todos` (search in your browser or in Insomnia to see the `JSON` response)
+- The initial todo list state should be fetched from [`https://jsonplaceholder.typicode.com/todos`](https://jsonplaceholder.typicode.com/todos) (search in your browser or in Insomnia to see the `JSON` response)
+- The entire app should be responsive, and it should work on all browsers flawlessly.
 
 To help you get started, I've written a general folder structure that you can follow:
 
@@ -45,7 +46,7 @@ To help you get started, I've written a general folder structure that you can fo
   .gitignore            ----- Make sure to add node_modules to .gitignore!
 ```
 
-We haven't worked with state management yet, but I think this is the perfect time for you to play around with some basic state in your app. `store.js` is the place where you ~store~ your state object: it has every state in it that you want to use across your app. Things like the todo list and user settings come in here. It is also a good idea to store the state fetching and updating logic in this module.
+We haven't worked with state management yet, but I think this is the perfect time for you to play around with some basic state in your app. `store.js` is the place where you ~store~ your state object: it has every state in it that you want to use across your app. Things like the todo list and user settings come in here. It is also a good idea to store the state fetching and updating logic in this module:
 
 ```javascript
   const store = {
@@ -63,7 +64,7 @@ We haven't worked with state management yet, but I think this is the perfect tim
    ],
    user: {
     name: 'Berci',
-    profileImageSrc: 'https://somewebsite.com/berci.png'
+    profileImageSrc: 'https://somewebsite.com/berci_avatar.png'
    }
    ...
   }
@@ -75,4 +76,5 @@ We haven't worked with state management yet, but I think this is the perfect tim
 ```
 
 If you have any questions, please don't hesitate to ask me!
+
 Have fun! 🦧
