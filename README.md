@@ -6,7 +6,7 @@ This assignment is the biggest milestone since we started the workshops. It's a 
 
 This assignment will require you to combine everything we covered so far into one relatively large application. And what other app to build, than a todo application? You'll find that whenever you pick up a new JavaScript related technology, the best way to test it is by building a todo app. It has everything in it: state management to handle your todos, different UIs to add and inspect todos, styling, and so on.
 
-You're tasked to make an app based on [this wireframe](). (TBA)
+You're tasked to make an app based on [this wireframe](https://www.figma.com/proto/SrTKP1pmBG6uVWGT7ZMRCi/Week-6-homework-wireframe?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.14&scaling=scale-down&starting-point-node-id=2%3A2).
 
 Some criteria for the app:
 - You'll have to initialise a `package.json` to manage installed libraries
