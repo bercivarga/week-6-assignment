@@ -1,0 +1,25 @@
+{
+  "name": "week-6-assignment",
+  "version": "1.0.0",
+  "description": "Welcome to Week 6's assignment.",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bercivarga/week-6-assignment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bercivarga/week-6-assignment/issues"
+  },
+  "homepage": "https://github.com/bercivarga/week-6-assignment#readme",
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
