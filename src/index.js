@@ -6,7 +6,6 @@ import {init as startApp} from './mvc/controller'
 function main() {
   try {
     startApp()
-    console.log('App started!')
   } catch(err) {
     console.error(err)
   }

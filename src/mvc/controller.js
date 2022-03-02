@@ -23,9 +23,7 @@ function handleAddTodo() {
     },
     showCancelButton: true,
     confirmButtonText: "Add",
-    showLoaderOnConfirm: true,
-  })
-  .then((result) => {
+  }).then((result) => {
     if (result.isConfirmed && result.value.length > 0) {
       model.todos.push(new Todo(result.value));
       refresh();
@@ -43,7 +41,6 @@ function handleDeleteTodo(id) {
     cancelButtonColor: "#d33",
     confirmButtonText: "Yes, delete it!",
   }).then((result) => {
-    /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       model.todos = model.todos.filter((todo) => todo.id !== id);
       refresh();

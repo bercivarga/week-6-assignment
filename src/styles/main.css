@@ -1,3 +1,80 @@
-h2 {
+body {
+  margin:  0;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  max-height: 100vh;
+  max-width: 50%;
+  min-width: 300px;
+  padding: 24px;
+  margin-top: 32px;
+  border-radius: 8px;
+  overflow: scroll;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#app h2 {
   color: blue;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:  4px;
+}
+
+.todo-btn {
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color .2s, box-shadow .2s;
+}
+
+.todo-btn:first-child {
+  width: 100%;
+}
+
+.todo-btn:first-child:hover {
+  background: darkred;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.todo-btn:last-child:hover {
+  background: lightgray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.add-button {
+  color: white;
+  font-weight: bold;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: seagreen;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  transition: background-color .2s, box-shadow .2s;
+}
+
+.add-button:hover {
+  background: darkgreen;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
