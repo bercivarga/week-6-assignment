@@ -1,3 +1,15 @@
-const app = document.getElementById('app');
+// This file collects the core modules that are required to run the app
+// Think of it as the top-level container of the 
 
-app.innerHTML = '<h2>Hello world!</h2>'
+import {init as startApp} from './mvc/controller'
+
+function main() {
+  try {
+    startApp()
+    console.log('App started!')
+  } catch(err) {
+    console.error(err)
+  }
+}
+
+main()
