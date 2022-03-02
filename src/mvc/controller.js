@@ -5,6 +5,7 @@ import { model } from "./model";
 import View from "../mvc/views/View";
 import TodoList from "./views/TodoList";
 import AddTodo from "./views/AddTodo";
+import { Todo } from "../helpers/Todo";
 
 export function init() {
   View.render(model.user.name);
@@ -13,7 +14,24 @@ export function init() {
   AddTodo.addButtonEventListener(handleAddTodo);
 }
 
-function handleAddTodo() {}
+function handleAddTodo() {
+  Swal.fire({
+    title: "Write down your todo",
+    input: "text",
+    inputAttributes: {
+      autocapitalize: "off",
+    },
+    showCancelButton: true,
+    confirmButtonText: "Add",
+    showLoaderOnConfirm: true,
+  })
+  .then((result) => {
+    if (result.isConfirmed && result.value.length > 0) {
+      model.todos.push(new Todo(result.value));
+      refresh();
+    }
+  });
+}
 
 function handleDeleteTodo(id) {
   Swal.fire({
@@ -28,7 +46,6 @@ function handleDeleteTodo(id) {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       model.todos = model.todos.filter((todo) => todo.id !== id);
-      TodoList.clear();
       refresh();
     } else if (result.isDenied) {
       return;
@@ -37,5 +54,6 @@ function handleDeleteTodo(id) {
 }
 
 function refresh() {
+  TodoList.clear();
   TodoList.render(model.todos, handleDeleteTodo);
 }
