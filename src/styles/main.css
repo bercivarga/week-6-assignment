@@ -23,7 +23,11 @@ main {
 }
 
 #app h2 {
-  color: blue;
+  color: seagreen;
+}
+
+.banner {
+  max-height: 150px;
 }
 
 .todo-list {

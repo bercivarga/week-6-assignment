@@ -8,8 +8,8 @@ import AddTodo from "./views/AddTodo";
 import { Todo } from "../helpers/Todo";
 
 export function init() {
-  View.render(model.user.name);
-  TodoList.render(model.todos, handleDeleteTodo);
+  View.render(model.user);
+  TodoList.render(model.todos, handleDeleteTodo, handleChangeTodo); // Not really best practice here...
   AddTodo.render();
   AddTodo.addButtonEventListener(handleAddTodo);
 }
@@ -23,6 +23,7 @@ function handleAddTodo() {
     },
     showCancelButton: true,
     confirmButtonText: "Add",
+    confirmButtonColor: "seagreen",
   }).then((result) => {
     if (result.isConfirmed && result.value.length > 0) {
       model.todos.push(new Todo(result.value));
@@ -37,8 +38,8 @@ function handleDeleteTodo(id) {
     text: "You won't be able to revert this!",
     icon: "warning",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "gray",
     confirmButtonText: "Yes, delete it!",
   }).then((result) => {
     if (result.isConfirmed) {
@@ -50,7 +51,26 @@ function handleDeleteTodo(id) {
   });
 }
 
+function handleChangeTodo(id) {
+  Swal.fire({
+    title: "Change todo to...",
+    input: "text",
+    inputAttributes: {
+      autocapitalize: "off",
+    },
+    showCancelButton: true,
+    confirmButtonText: "Change",
+    confirmButtonColor: "seagreen",
+  }).then((result) => {
+    if (result.isConfirmed && result.value.length > 0) {
+      const todo = model.todos.find(todo => todo.id === id);
+      todo.name = result.value;
+      refresh();
+    }
+  });
+}
+
 function refresh() {
   TodoList.clear();
-  TodoList.render(model.todos, handleDeleteTodo);
+  TodoList.render(model.todos, handleDeleteTodo, handleChangeTodo); // TODO: find some alternative for this
 }

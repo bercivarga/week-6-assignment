@@ -7,13 +7,14 @@ export class ViewClass {
     parentEl.innerHtml = "";
   }
 
-  render(name) {
+  render(user) {
     const div = document.createElement("div");
     div.className = "main-view";
 
     div.innerHTML = `
-        <h2>Welcome back, ${name}!</h2>
-        <h3>Here are your todos for today</h3>
+        <img class="banner" src=${user.banner} alt="${user.name}'s banner"">
+        <h2>Welcome back, ${user.name}!</h2>
+        <p>Here are your todos for today</p>
         <div class="todo-list"></div>
     `;
 

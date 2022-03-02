@@ -5,7 +5,7 @@ class TodoList extends ViewClass {
     document.querySelector(".todo-list").innerHTML = "";
   }
 
-  render(todos, callback) {
+  render(todos, deleteCallback, changeCallback) {
     const todoList = document.querySelector(".todo-list");
     const fragment = document.createDocumentFragment();
 
@@ -19,7 +19,8 @@ class TodoList extends ViewClass {
       changeBtn.className = "todo-btn";
       todoBtn.innerText = todo.name;
       changeBtn.innerText = "Change"
-      todoBtn.addEventListener("click", () => callback(todo.id));
+      todoBtn.addEventListener("click", () => deleteCallback(todo.id));
+      changeBtn.addEventListener("click", () => changeCallback(todo.id));
       fragment.append(todoCard);
     });
 
