@@ -1,6 +1,6 @@
 const app = document.getElementById('app');
 
-class View {
+export class ViewClass {
   parentEl = app
 
   clear() {
@@ -8,15 +8,17 @@ class View {
   }
 
   render(name) {
-    console.log('hello')
     const div = document.createElement('div')
-    div.classList.add('main-view')
+    div.className = 'main-view'
+
     div.innerHTML = `
         <h2>Welcome back, ${name}!</h2>
         <h3>Here are your todos for today</h3>
+        <div class="todo-list"></div>
     `
+
     this.parentEl.prepend(div)
   }
 }
 
-export default new View()
+export default new ViewClass()
