@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 
 import { popEditTodo } from "./popup.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-import { getDatabase, ref, onValue, remove, set, push } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, onValue, remove, set, push } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
