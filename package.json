@@ -2,7 +2,6 @@
   "name": "jerome-todo",
   "version": "1.0.0",
   "description": "Welcome to Week 6's assignment.",
-  "main": "src/js/main.js",
   "source": "index.html",
   "scripts": {
     "start": "parcel",
@@ -25,6 +24,7 @@
   },
   "dependencies": {
     "firebase": "^9.6.7",
-    "sweetalert": "^2.1.2"
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.4.4"
   }
 }

@@ -1,9 +1,9 @@
 import { writeTodo, _ref, _remove, _db, _push, _set } from "./firebase.js";
 import { updateLastId, store } from "./store.js";
-
+import Swal from 'sweetalert2'
 
 export function popAddTodo(userId, id, title, completed) {
-    swal.fire({
+    Swal.fire({
         title: `Add todo!`,
         html: `<br> 
             <textarea rows="4" cols="50" class="popinput" id="mytodo">${title}</textarea>
@@ -34,11 +34,11 @@ export function popAddTodo(userId, id, title, completed) {
             completed: false
         });
 
-        swal.close()
+        Swal.close()
     })
 
     cancel.addEventListener('click', () => {
-        swal.close()
+        Swal.close()
     })
 
 
