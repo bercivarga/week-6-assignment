@@ -1,9 +1,15 @@
 import { addStoreTodo, deleteStoreTodo, saveTodoEdit  } from "../store/store";
 import { renderTodoList, renderEditPopup, closeEditPopup } from "../js/renderingLogic";
+import swal from 'sweetalert';
 
 // HTML element variables
 let addButton = document.querySelector(".addtodo");
 let todoInput = document.querySelector(".newtodo");
+
+function swallDelete (deleteFunction) {
+    
+}
+
 
 // Event handlers
 addButton.addEventListener("click", function () {
@@ -14,7 +20,20 @@ export function addDeleteButtonEventHandler() {
   let deleteButtonArray = document.querySelectorAll(".delete");
   for (let i of deleteButtonArray) {
     i.addEventListener("click", function () {
-      deleteStoreTodo(i.parentElement.id, renderTodoList);
+        swal({
+            title: "Are you sure?",
+            text: "Are you sure that you want to delete this todo?",
+            icon: "warning",
+            dangerMode: true,
+          })
+          .then(willDelete => {
+            if (willDelete) {
+              swal("Deleted!", "Your todo has been deleted!", "success");
+              deleteStoreTodo(i.parentElement.id, renderTodoList)
+            }
+          });
+        
+        
     });
   }
 }
