@@ -12,10 +12,13 @@ export function renderTodoList (storeTodoList) {
     listElement.innerHTML = null
     for (let i of storeTodoList) {
         listElement.innerHTML += 
-            `<div id='${i.title}' class='todo'>
+            `<div' class='todo'>
                 <div>${i.title}</div>
-                <button class='edit'>edit</button>
-                <button class='delete'>delete</button>
+                <div id='${i.title}' class='todobuttons'>
+                    <button class='edit'>edit</button>
+                    <button class='delete'>delete</button>
+                </div>
+
             </div>`    
     }
     addDeleteButtonEventHandler()
@@ -28,12 +31,10 @@ export function renderEditPopup (todoTitle) {
     edit.style.display = 'block'
     edit.innerHTML = 
         `
-        <div class='shadow'>
-            <div class='popup'>
-                <h1>Enter new todo title:</h1>
-                <input class='editinput' value='${todoTitle}'>
-                <button id='${todoTitle}' class='save'>SAVE</button>
-            </div
+        <div class='popup'>
+            <h1>Enter new todo title:</h1>
+            <input class='editinput' value='${todoTitle}'>
+            <button id='${todoTitle}' class='save'>SAVE</button>
         </div
         `
     addSaveButtonEventHandler()

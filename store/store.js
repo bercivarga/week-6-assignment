@@ -37,7 +37,6 @@ export function editStoreTodo(todoTitle, renderFunction) {
 
 //State saving todo edit
 export function saveTodoEdit (todoTitle, changedTitle, renderFunction) {
-  console.log('test')
   let editedTodo = store.todos.find(i => i.title == todoTitle)
   editedTodo.title = changedTitle
   renderFunction(store.todos)

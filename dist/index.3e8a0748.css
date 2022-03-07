@@ -1,5 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #182a53;
+    color:white
 }
 
 h1 {
@@ -12,8 +14,8 @@ h1 {
     flex-direction: column;
     margin: auto;
     width: 50%;
-    background: rgb(34,193,195);
-    background: linear-gradient(166deg, rgba(34,193,195,1) 0%, rgba(45,143,253,1) 100%);
+    background: #182a53;
+    background: linear-gradient(166deg, #5389a0 0%, #062b38 100%);
     padding: 10px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
@@ -21,6 +23,7 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .logo {
+
     margin:auto;
     width: 20%;
 
@@ -43,9 +46,25 @@ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   /* Modal Content */
   .popup {
     background-color: #fefefe;
+    color:black;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    border-radius: 8px;
+    width: 45%;
+  }
+
+  .todo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 8px;
+      background-color: #182a53;
+      padding:10px;
+      margin:10px
+  }
+
+  .todobuttons {
+      height: 30px;
+      display: flex;
   }
 /*# sourceMappingURL=index.3e8a0748.css.map */
