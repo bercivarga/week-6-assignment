@@ -1,6 +1,11 @@
 import { addDeleteButtonEventHandler, addEditButtonEventHandler, addSaveButtonEventHandler } from './todoHandlers'
 let listElement = document.querySelector(".todos")
 let edit = document.querySelector('.editpopup')
+let usertitle = document.querySelector('.usertitle')
+
+export function renderTitle (userName) {
+    usertitle.innerHTML =  `<h1>${userName}</h1>`
+}
 
 export function renderTodoList (storeTodoList) {
     

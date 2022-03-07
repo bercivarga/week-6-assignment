@@ -51,3 +51,4 @@ export function retrieveDefaultTodos(userId, renderFunction) {
     .then(data => store.todos = data)
     .then(() => renderFunction(store.todos))
 }
+
