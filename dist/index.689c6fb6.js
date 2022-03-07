@@ -522,8 +522,8 @@ function hmrAcceptRun(bundle, id) {
 var _store = require("../store/store");
 var _renderingLogic = require("../js/renderingLogic");
 var _todoHandlers = require("../js/todoHandlers");
-_store.updateUserName('David Test');
-_renderingLogic.renderTitle(_store.store.user.name);
+_store.updateUserName(_store.store.user.name);
+_renderingLogic.renderHeader(_store.store.user.name);
 _store.retrieveDefaultTodos(_store.store.user.id, _renderingLogic.renderTodoList);
 
 },{"../store/store":"cEhL8","../js/renderingLogic":"lhBDt","../js/todoHandlers":"53PRm"}],"cEhL8":[function(require,module,exports) {
@@ -627,7 +627,7 @@ exports.export = function(dest, destName, get) {
 },{}],"lhBDt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "renderTitle", ()=>renderTitle
+parcelHelpers.export(exports, "renderHeader", ()=>renderHeader
 );
 parcelHelpers.export(exports, "renderTodoList", ()=>renderTodoList
 );
@@ -639,8 +639,8 @@ var _todoHandlers = require("./todoHandlers");
 let listElement = document.querySelector(".todos");
 let edit = document.querySelector('.editpopup');
 let usertitle = document.querySelector('.usertitle');
-function renderTitle(userName) {
-    usertitle.innerHTML = `<h1>${userName}</h1>`;
+function renderHeader(userName) {
+    usertitle.innerHTML = `<h1>${userName}'s todo's</h1>`;
 }
 function renderTodoList(storeTodoList) {
     listElement.innerHTML = null;
@@ -653,6 +653,7 @@ function renderTodoList(storeTodoList) {
     _todoHandlers.addEditButtonEventHandler();
 }
 function renderEditPopup(todoTitle) {
+    edit.style.display = 'block';
     edit.innerHTML = `
         <div class='shadow'>
             <div class='popup'>
@@ -665,6 +666,7 @@ function renderEditPopup(todoTitle) {
     _todoHandlers.addSaveButtonEventHandler();
 }
 function closeEditPopup() {
+    edit.style.display = 'none';
     edit.innerHTML = '<div></div>';
 }
 

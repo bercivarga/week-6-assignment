@@ -3,8 +3,8 @@ let listElement = document.querySelector(".todos")
 let edit = document.querySelector('.editpopup')
 let usertitle = document.querySelector('.usertitle')
 
-export function renderTitle (userName) {
-    usertitle.innerHTML =  `<h1>${userName}</h1>`
+export function renderHeader (userName) {
+    usertitle.innerHTML =  `<h1>${userName}'s todo's</h1>`
 }
 
 export function renderTodoList (storeTodoList) {
@@ -25,6 +25,7 @@ export function renderTodoList (storeTodoList) {
 
 
 export function renderEditPopup (todoTitle) {
+    edit.style.display = 'block'
     edit.innerHTML = 
         `
         <div class='shadow'>
@@ -39,5 +40,6 @@ export function renderEditPopup (todoTitle) {
 }
 
 export function closeEditPopup () {
+    edit.style.display = 'none'
     edit.innerHTML = '<div></div>'
 }
