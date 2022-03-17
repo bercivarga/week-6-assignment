@@ -2,8 +2,8 @@
   "name": "week-6-assignment",
   "version": "1.0.0",
   "description": "Welcome to Week 6's assignment.",
-  "main": "js/main.js",
-  "source": "index.html",
+  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
     "start": "parcel",
     "test": "echo \"Error: no test specified\" && exit 1"

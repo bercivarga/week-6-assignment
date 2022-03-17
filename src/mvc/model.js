@@ -27,7 +27,7 @@ export function addStoreTodo(inputElement, renderFunction) {
 //State delete todo
 export function deleteStoreTodo(todoTitle, renderFunction) { 
   store.todos = store.todos.filter(i => i.title !== todoTitle)
-  renderFunction(store.todos)
+  renderFunction(store.todos, deleteStoreTodo, renderFunction)
 }
 
 //State edit todo
@@ -43,11 +43,10 @@ export function saveTodoEdit (todoTitle, changedTitle, renderFunction) {
 }
 
 // State retrieve default list
-export function retrieveDefaultTodos(userId, renderFunction) {
+export function retrieveDefaultTodos(userId) {
   fetch("https://jsonplaceholder.typicode.com/todos")
     .then(response => response.json())
     .then(data => data.filter(todo => todo.userId == userId))
     .then(data => store.todos = data)
-    .then(() => renderFunction(store.todos))
 }
 
