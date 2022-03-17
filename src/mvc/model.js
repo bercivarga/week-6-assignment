@@ -41,12 +41,3 @@ export function saveTodoEdit (todoTitle, changedTitle, renderFunction) {
   editedTodo.title = changedTitle
   renderFunction(store.todos)
 }
-
-// State retrieve default list
-export function retrieveDefaultTodos(userId) {
-  fetch("https://jsonplaceholder.typicode.com/todos")
-    .then(response => response.json())
-    .then(data => data.filter(todo => todo.userId == userId))
-    .then(data => store.todos = data)
-}
-

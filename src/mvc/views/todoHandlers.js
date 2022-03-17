@@ -1,6 +1,5 @@
 // import { addStoreTodo, deleteStoreTodo, saveTodoEdit  } from "./model";
 import { renderTodoList, renderEditPopup, closeEditPopup } from "./renderingLogic";
-import swal from 'sweetalert';
 
 // // HTML element variables
 // let addButton = document.querySelector(".addtodo");
