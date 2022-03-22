@@ -9,21 +9,22 @@ This assignment will require you to combine everything we covered so far into on
 You're tasked to make an app based on [this wireframe](https://www.figma.com/proto/SrTKP1pmBG6uVWGT7ZMRCi/Week-6-homework-wireframe?page-id=0%3A1&node-id=2%3A2&viewport=241%2C48%2C0.14&scaling=scale-down&starting-point-node-id=2%3A2).
 
 Some criteria for the app:
-- You'll have to initialise a `package.json` to manage installed libraries
-- You need to divide your application into ES modules
-- You need to set up a build process for your app. We've done this during class, with `parcel`. Don't forget to add your scripts to `package.json`.
-- You need to use modern JavaScript syntax. This means that you cannot use `var`. Try to avoid using for-loops that look like this `for (let i; i < 10; i++)`, instead use `for (const i of yourArray)`, etc.
-- You'll need to come up with the styling your app yourself
-- Todos should be able to be:
-  - Created
-  - Deleted
-  - Changed
-- You need to use some libraries to make your app a bit fancier. To browse packages, go to [npmjs.com](https://npmjs.com):
-  - Use [`parcel`](https://www.npmjs.com/package/parcel) to hot-reload and build your project
-  - Use [`sweetalert`](https://www.npmjs.com/package/sweetalert) to display an alert to the user when they want to delete a todo (Hint: the first example on the package's page is a good starting point 😉)
-  - Search for a library yourself that you can somehow incorporate into the project
-- The initial todo list state should be fetched from [`https://jsonplaceholder.typicode.com/todos`](https://jsonplaceholder.typicode.com/todos) (search in your browser or in Insomnia to see the `JSON` response)
-- The entire app should be responsive, and it should work on all browsers flawlessly.
+
+-   You'll have to initialise a `package.json` to manage installed libraries
+-   You need to divide your application into ES modules
+-   You need to set up a build process for your app. We've done this during class, with `parcel`. Don't forget to add your scripts to `package.json`.
+-   You need to use modern JavaScript syntax. This means that you cannot use `var`. Try to avoid using for-loops that look like this `for (let i; i < 10; i++)`, instead use `for (const i of yourArray)`, etc.
+-   You'll need to come up with the styling your app yourself
+-   Todos should be able to be:
+    -   Created
+    -   Deleted
+    -   Changed
+-   You need to use some libraries to make your app a bit fancier. To browse packages, go to [npmjs.com](https://npmjs.com):
+    -   Use [`parcel`](https://www.npmjs.com/package/parcel) to hot-reload and build your project
+    -   Use [`sweetalert`](https://www.npmjs.com/package/sweetalert) to display an alert to the user when they want to delete a todo (Hint: the first example on the package's page is a good starting point 😉)
+    -   Search for a library yourself that you can somehow incorporate into the project
+-   The initial todo list state should be fetched from [`https://jsonplaceholder.typicode.com/todos`](https://jsonplaceholder.typicode.com/todos) (search in your browser or in Insomnia to see the `JSON` response)
+-   The entire app should be responsive, and it should work on all browsers flawlessly.
 
 To help you get started, I've written a general folder structure that you can follow:
 

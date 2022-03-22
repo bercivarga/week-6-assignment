@@ -1,15 +1,15 @@
-const app = document.getElementById("app")
+const app = document.getElementById('app')
 
 export class ViewClass {
     parentView = app
 
     clear() {
-        this.parentView.innerHTML = ""
+        this.parentView.innerHTML = ''
     }
 
     render(userName, deleteFunction, editFunction) {
-        let div = document.createElement("div");
-        div.className = "overview"
+        let div = document.createElement('div')
+        div.className = 'overview'
 
         div.innerHTML = `
             <img class="logo" src="https://cdn-icons-png.flaticon.com/512/906/906334.png">
